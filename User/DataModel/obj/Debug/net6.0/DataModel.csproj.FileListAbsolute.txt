@@ -1,0 +1,23 @@
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\bin\Debug\net6.0\DataModel.deps.json
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\bin\Debug\net6.0\DataModel.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\bin\Debug\net6.0\DataModel.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.csproj.AssemblyReference.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\DataModel.pdb
+D:\Subjects\III\ASP.NET\BTL - asp.net\Codelearn\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\bin\Debug\net6.0\DataModel.deps.json
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\bin\Debug\net6.0\DataModel.dll
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\bin\Debug\net6.0\DataModel.pdb
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.dll
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.pdb
+C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\ref\DataModel.dll

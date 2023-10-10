@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GateWay",
+    "\\User",
+    "\\User\\API",
+    "\\User\\BLL",
+    "\\User\\BLL\\Interfaces",
+    "\\User\\DAL"
+  ],
+  "SelectedNode": "\\User\\API",
+  "PreviewInSolutionExplorer": false
+}
