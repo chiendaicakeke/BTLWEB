@@ -39,12 +39,13 @@ namespace API.Controllers
             return users;
         }
 
-        [Route("xoa_Users")]
-        [HttpDelete]
-        public UsersModel DelteManafacture([FromBody] UsersModel users)
+        [HttpDelete("delete-Users")]
+        public IActionResult DeleteItem(string id)
         {
-            _uBusiness.Delete(users);
-            return users;
+            _uBusiness.Delete(id);
+            return Ok(new { message = "xoa thanh cong" });
         }
+
+
     }
 }

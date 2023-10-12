@@ -28,3 +28,18 @@ C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DAL\obj\Debug\net
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DAL\obj\Debug\net6.0\refint\DAL.dll
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\WEB\BTL\User\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\WEB\BTL\User\DAL\bin\Debug\net6.0\DAL.dll
+D:\WEB\BTL\User\DAL\bin\Debug\net6.0\DAL.pdb
+D:\WEB\BTL\User\DAL\bin\Debug\net6.0\DataModel.dll
+D:\WEB\BTL\User\DAL\bin\Debug\net6.0\DataModel.pdb
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.dll
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\DAL.pdb
+D:\WEB\BTL\User\DAL\obj\Debug\net6.0\ref\DAL.dll

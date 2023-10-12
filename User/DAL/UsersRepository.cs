@@ -77,14 +77,14 @@ namespace DAL
             }
         }
 
-        public bool Delete(UsersModel md)
+        public bool Delete(string id)
         {
             string msgError = "";
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Users",
-                "@UserID", md.UserID);
-
+                "@UserID", id);
+                ;
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -96,5 +96,7 @@ namespace DAL
                 throw ex;
             }
         }
+
+
     }
 }

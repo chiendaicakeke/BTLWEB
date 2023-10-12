@@ -28,14 +28,15 @@ namespace BLL
         {
             return _res.Create(users);
         }
-
+        
         public bool Update(UsersModel users)
         {
             return _res.Update(users);
         }
-        public bool Delete(string users)
+        public bool Delete(string id)
         {
-            return _res.Delete(users);
+            return _res.Delete(id);
         }
+
     }
 }

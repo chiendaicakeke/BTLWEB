@@ -15,6 +15,7 @@ namespace DAL.Interfaces
         bool Create(UsersModel users);
 
         bool Update(UsersModel users);
+
         bool Delete(string id);
     }
 }

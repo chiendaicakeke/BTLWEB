@@ -21,3 +21,14 @@ C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Deb
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\refint\DataModel.dll
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\DataModel.pdb
 C:\Users\chien dz\Documents\Zalo Received Files\Codelearn\User\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+D:\WEB\BTL\User\DataModel\bin\Debug\net6.0\DataModel.deps.json
+D:\WEB\BTL\User\DataModel\bin\Debug\net6.0\DataModel.dll
+D:\WEB\BTL\User\DataModel\bin\Debug\net6.0\DataModel.pdb
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.dll
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\DataModel.pdb
+D:\WEB\BTL\User\DataModel\obj\Debug\net6.0\ref\DataModel.dll
