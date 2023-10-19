@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WEB\\BTL\\User\\BLL\\BLL.csproj": {}
+    "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "D:\\WEB\\BTL\\User\\BLL\\BLL.csproj": {
+    "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WEB\\BTL\\User\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\WEB\\BTL\\User\\BLL\\BLL.csproj",
+        "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\chien dz\\.nuget\\packages\\",
-        "outputPath": "D:\\WEB\\BTL\\User\\BLL\\obj\\",
+        "outputPath": "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chien dz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\WEB\\BTL\\User\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\WEB\\BTL\\User\\DAL\\DAL.csproj"
+              "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\DAL.csproj"
               },
-              "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj": {
-                "projectPath": "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj"
+              "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj": {
+                "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "D:\\WEB\\BTL\\User\\DAL\\DAL.csproj": {
+    "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WEB\\BTL\\User\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\WEB\\BTL\\User\\DAL\\DAL.csproj",
+        "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\chien dz\\.nuget\\packages\\",
-        "outputPath": "D:\\WEB\\BTL\\User\\DAL\\obj\\",
+        "outputPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chien dz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj": {
-                "projectPath": "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj"
+              "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj": {
+                "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj"
               }
             }
           }
@@ -145,14 +145,14 @@
         }
       }
     },
-    "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj": {
+    "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj",
+        "projectUniqueName": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj",
         "projectName": "DataModel",
-        "projectPath": "D:\\WEB\\BTL\\User\\DataModel\\DataModel.csproj",
+        "projectPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj",
         "packagesPath": "C:\\Users\\chien dz\\.nuget\\packages\\",
-        "outputPath": "D:\\WEB\\BTL\\User\\DataModel\\obj\\",
+        "outputPath": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chien dz\\AppData\\Roaming\\NuGet\\NuGet.Config",

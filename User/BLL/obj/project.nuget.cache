@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9aPmN87uCv2rnwj9BqUsgty9b8rG7CSjSykrPIlbj365M3hQFBaP/Jsypb6RqIIDvzQtXas633AaUlLLLiJ6kw==",
+  "dgSpecHash": "UqJJCBNvID98IJYIQPNrqlEQQv5/C5hCAUr56EFO0C/mQOs2niblqRODyevPsTXg5X/kvb0eWt1u9p017K775g==",
   "success": true,
-  "projectFilePath": "D:\\WEB\\BTL\\User\\BLL\\BLL.csproj",
+  "projectFilePath": "D:\\WEB\\BTL\\BTLWEB\\User\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chien dz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\chien dz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

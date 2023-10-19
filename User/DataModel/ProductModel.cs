@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModel
 {
-    internal class ProductModel
+    public class ProductModel
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
