@@ -10,25 +10,25 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ProductRepository : IProductRepository
+    public class ColectionRepository : IColectionRepository
     {
         private IDatabaseHelper _db;
 
-        public ProductRepository(IDatabaseHelper db)
+        public ColectionRepository(IDatabaseHelper db)
         {
             _db = db;
         }
 
 
-        public List<ProductModel> GetAll()
+        public List<ColectionModel> GetAll()
         {
             string msgError = "";
             try
             {
-                var data = _db.ExecuteQuery("sp_hien_thi_Product");
+                var data = _db.ExecuteQuery("sp_hien_thi_Colection");
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return data.ConvertTo<ProductModel>().ToList();
+                return data.ConvertTo<ColectionModel>().ToList();
             }
             catch (Exception ex)
             {
@@ -36,16 +36,14 @@ namespace DAL
                 throw ex;
             }
         }
-        public bool Create(ProductModel product)
+        public bool Create(ColectionModel colection)
         {
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Product",
-                "@ProductName", product.ProductName,
-                "@Price", product.Price,
-                "@Size", product.Size,
-                "@CollectionID", product.CollectionID);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Colection",
+                "@CollectionName", colection.CollectionName,
+                "@Description", colection.Description);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -58,17 +56,15 @@ namespace DAL
             }
         }
 
-        public bool Update(ProductModel product)
+        public bool Update(ColectionModel colection)
         {
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Product",
-                "@ProductID" , product.ProductID,
-                "@ProductName", product.ProductName,
-                "@Price", product.Price,
-                "@Size", product.Size,
-                "@CollectionID", product.CollectionID);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Customer",
+                "@CollectionID", colection.CollectionID,
+                "@CollectionName", colection.CollectionName,
+                "@Description", colection.Description);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -86,8 +82,8 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Product",
-                "@ProductID", id);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Colection",
+                "@CollectionID", id);
                 ;
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
