@@ -40,6 +40,8 @@ builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
 builder.Services.AddTransient<ICustomerBusiness, CustomerBusiness>();
 builder.Services.AddTransient<IColectionRepository, ColectionRepository>();
 builder.Services.AddTransient<IColectionBusiness, ColectionBusiness>();
+builder.Services.AddTransient<IMixerRepository, MixerRepository>();
+builder.Services.AddTransient<IMixerBusiness, MixerBusiness>();
 
 
 

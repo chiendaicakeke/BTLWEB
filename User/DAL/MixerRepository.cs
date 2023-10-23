@@ -10,25 +10,25 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ProductRepository : IProductRepository
+    public class MixerRepository : IMixerRepository
     {
         private IDatabaseHelper _db;
 
-        public ProductRepository(IDatabaseHelper db)
+        public MixerRepository(IDatabaseHelper db)
         {
             _db = db;
         }
 
 
-        public List<ProductModel> GetAll()
+        public List<MixerModel> GetAll()
         {
             string msgError = "";
             try
             {
-                var data = _db.ExecuteQuery("sp_hien_thi_Product");
+                var data = _db.ExecuteQuery("sp_hien_thi_Mixer");
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return data.ConvertTo<ProductModel>().ToList();
+                return data.ConvertTo<MixerModel>().ToList();
             }
             catch (Exception ex)
             {
@@ -36,16 +36,15 @@ namespace DAL
                 throw ex;
             }
         }
-        public bool Create(ProductModel product)
+        public bool Create(MixerModel mixer)
         {
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Product",
-                "@ProductName", product.ProductName,
-                "@Price", product.Price,
-                "@Size", product.Size,
-                "@CollectionID", product.CollectionID);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Mixer",
+                "@MixerName", mixer.MixerName,
+                "@Description", mixer.Description,
+                "@ProductID", mixer.ProductID);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -54,21 +53,20 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                 throw ex;
+                throw ex;
             }
         }
 
-        public bool Update(ProductModel product)
+        public bool Update(MixerModel mixer)
         {
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Product",
-                "@ProductID" , product.ProductID,
-                "@ProductName", product.ProductName,
-                "@Price", product.Price,
-                "@Size", product.Size,
-                "@CollectionID", product.CollectionID);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Mixer",
+                "@MixerID", mixer.MixerID,
+                "@MixerName", mixer.MixerName,
+                "@Description", mixer.Description,
+                "@ProductID", mixer.ProductID);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -86,8 +84,8 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Product",
-                "@ProductID", id);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Mixer",
+                "@MixerID", id);
                 ;
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
