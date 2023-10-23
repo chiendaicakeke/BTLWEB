@@ -42,6 +42,8 @@ builder.Services.AddTransient<IColectionRepository, ColectionRepository>();
 builder.Services.AddTransient<IColectionBusiness, ColectionBusiness>();
 builder.Services.AddTransient<IMixerRepository, MixerRepository>();
 builder.Services.AddTransient<IMixerBusiness, MixerBusiness>();
+builder.Services.AddTransient<IFavoriteRepository, FavoriteRepository>();
+builder.Services.AddTransient<IFavoriteBusiness, FavoriteBusiness>();
 
 
 
