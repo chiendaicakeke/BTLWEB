@@ -17,5 +17,6 @@ namespace DAL.Interfaces
         bool Update(ProductModel product);
 
         bool Delete(string id);
+        ProductModel GetDataById(string id);
     }
 }

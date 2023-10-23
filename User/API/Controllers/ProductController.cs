@@ -46,6 +46,8 @@ namespace API.Controllers
             return Ok(new { message = "xoa thanh cong" });
         }
 
+        [HttpGet("get-by-id{id}")]
+        public ProductModel GetDataById(string id) => _uBusiness.GetDataById(id);
 
     }
 }

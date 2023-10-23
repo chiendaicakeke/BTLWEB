@@ -37,6 +37,7 @@ namespace BLL
         {
             return _res.Delete(id);
         }
+        public ProductModel GetDataById(string id) => _res.GetDataById(id);
 
     }
 }

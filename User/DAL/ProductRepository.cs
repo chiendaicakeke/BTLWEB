@@ -100,6 +100,25 @@ namespace DAL
                 throw ex;
             }
         }
+        public ProductModel GetDataById(string id)
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteSProcedureReturnDataTable(
+                    out msgError,
+                    "sp_tim_kiem_Product",
+                    "@ProductID",
+                    id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<ProductModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
     }
