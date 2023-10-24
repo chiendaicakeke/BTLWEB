@@ -44,6 +44,8 @@ builder.Services.AddTransient<IMixerRepository, MixerRepository>();
 builder.Services.AddTransient<IMixerBusiness, MixerBusiness>();
 builder.Services.AddTransient<IFavoriteRepository, FavoriteRepository>();
 builder.Services.AddTransient<IFavoriteBusiness, FavoriteBusiness>();
+builder.Services.AddTransient<IOderRepository, OderRepository>();
+builder.Services.AddTransient<IOderBusiness, OderBusiness>();
 
 
 
