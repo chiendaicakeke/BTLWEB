@@ -46,6 +46,8 @@ builder.Services.AddTransient<IFavoriteRepository, FavoriteRepository>();
 builder.Services.AddTransient<IFavoriteBusiness, FavoriteBusiness>();
 builder.Services.AddTransient<IOderRepository, OderRepository>();
 builder.Services.AddTransient<IOderBusiness, OderBusiness>();
+builder.Services.AddTransient<IBillRepository, BillRepository>();
+builder.Services.AddTransient<IBillBusiness, BillBusiness>();
 
 
 
