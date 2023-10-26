@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,30 +20,17 @@ namespace DAL
             _db = db;
         }
 
-
-        public List<BillModel> GetAll()
-        {
-            string msgError = "";
-            try
-            {
-                var data = _db.ExecuteQuery("sp_hien_thi_Bill");
-                if (!string.IsNullOrEmpty(msgError))
-                    throw new Exception(msgError);
-                return data.ConvertTo<BillModel>().ToList();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
         public bool Create(BillModel bill)
         {
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Bill",
-                "@CustomerID", bill.CustomerID);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_bill_create",
+                "@CreateTime", bill.CreateTime,
+                "@UserID", bill.UserID,
+                "@Total", bill.Total,
+                "@list_json_DetailBill", bill.list_json_DetailBill != null ? MessageConvert.SerializeObject(bill.list_json_DetailBill) : null);
+
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -60,9 +48,12 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Bill",
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Bill_update",
                 "@BillID", bill.BillID,
-                 "@CustomerID", bill.CustomerID);
+                "@CreateTime", bill.CreateTime,
+                "@UserID", bill.UserID,
+                "@Total", bill.Total,
+                "@list_json_DetailBill", bill.list_json_DetailBill != null ? MessageConvert.SerializeObject(bill.list_json_DetailBill) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -80,7 +71,7 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_xoa_Bill",
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Bill_delete",
                 "@BillID", id);
                 ;
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))

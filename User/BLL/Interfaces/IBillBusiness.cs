@@ -10,7 +10,7 @@ namespace DAL.Interfaces
     public interface IBillBusiness
     {
 
-        List<BillModel> GetAll();
+       
 
         bool Create(BillModel bill);
 

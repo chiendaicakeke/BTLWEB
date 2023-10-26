@@ -20,10 +20,7 @@ namespace BLL
         }
 
 
-        public List<BillModel> GetAll()
-        {
-            return _res.GetAll();
-        }
+        
 
         public bool Create(BillModel bill)
         {

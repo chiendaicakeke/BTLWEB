@@ -16,13 +16,6 @@ namespace API.Controllers
             _uBusiness = cBusiness;
         }
 
-        [HttpGet("get-all-Bill")]
-        public IActionResult GetAll()
-        {
-            var dt = _uBusiness.GetAll();
-            return Ok(dt);
-        }
-
         [Route("create-Bill")]
         [HttpPost]
         public BillModel CreateCar([FromBody] BillModel bill)
@@ -30,7 +23,7 @@ namespace API.Controllers
             _uBusiness.Create(bill);
             return bill;
         }
-
+        
         [Route("update-Bill")]
         [HttpPost]
         public BillModel UpdateItem([FromBody] BillModel bill)

@@ -9,7 +9,7 @@ namespace DAL.Interfaces
 {
     public interface IBillRepository
     {
-        List<BillModel> GetAll();
+        
 
         bool Create(BillModel bill);
 
