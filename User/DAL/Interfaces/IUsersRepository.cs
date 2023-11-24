@@ -9,12 +9,15 @@ namespace DAL.Interfaces
 {
     public interface IUsersRepository
     {
-       List<UsersModel> GetAll();
+
+        UserModel GetById(string id);
+
+        UserModel Login(string username, string password);
        
-       bool Create(UsersModel users);
+        bool Create(UserModel users);
 
-       bool Update(UsersModel users);
+        bool Update(UserModel users);
 
-       bool Delete(string id);
+        bool Delete(string id);
     }
 }

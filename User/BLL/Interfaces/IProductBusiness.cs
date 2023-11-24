@@ -10,13 +10,9 @@ namespace DAL.Interfaces
     public interface IProductBusiness
     {
 
-        List<ProductModel> GetAll();
+        List<ProductModel> GetNewProducts(); 
+        ProductModel GetById(string id);
 
-        bool Create(ProductModel product);
-
-        bool Update(ProductModel product);
-
-        bool Delete(string id);
-        ProductModel GetDataById(string id);
+        List<ProductModel> Search(int pageIndex, int pageSize, out long total, string name);
     }
 }

@@ -11,33 +11,27 @@ namespace BLL
     public class ProductBusiness : IProductBusiness
     {
         private IProductRepository _res;
-        private string secret;
-        public ProductBusiness(IProductRepository res, IConfiguration configuration)
+        public ProductBusiness(IProductRepository res)
         {
             _res = res;
-            secret = configuration["AppSettings:Secret"];
+        }
+
+        public List<ProductModel> GetNewProducts()
+        {
+            return _res.GetNewProducts();
         }
 
 
-        public List<ProductModel> GetAll()
+        public ProductModel GetById(string id)
         {
-            return _res.GetAll();
+            return _res.GetById(id);
         }
 
-        public bool Create(ProductModel product)
-        {
-            return _res.Create(product);
-        }
 
-        public bool Update(ProductModel product)
+        public List<ProductModel> Search(int pageIndex, int pageSize, out long total, string name)
         {
-            return _res.Update(product);
+            return _res.Search(pageIndex, pageSize, out total, name);   
         }
-        public bool Delete(string id)
-        {
-            return _res.Delete(id);
-        }
-        public ProductModel GetDataById(string id) => _res.GetDataById(id);
 
     }
 }

@@ -10,11 +10,14 @@ namespace DAL.Interfaces
     public interface IUsersBusiness
     {
 
-        List<UsersModel> GetAll();
 
-        bool Create(UsersModel users);
+        UserModel GetById(string id);
 
-        bool Update(UsersModel users);
+        UserModel Login(string username, string password);
+
+        bool Create(UserModel users);
+
+        bool Update(UserModel users);
 
         bool Delete(string id);
     }

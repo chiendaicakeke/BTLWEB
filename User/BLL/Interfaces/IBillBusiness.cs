@@ -10,12 +10,9 @@ namespace DAL.Interfaces
     public interface IBillBusiness
     {
 
-       
-
         bool Create(BillModel bill);
 
-        bool Update(BillModel bill);
-
-        bool Delete(string id);
+        List<BillModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao,
+           DateTime? to_NgayTao);
     }
 }

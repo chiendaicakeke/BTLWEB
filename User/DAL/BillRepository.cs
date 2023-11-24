@@ -25,11 +25,11 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_bill_create",
-                "@CreateTime", bill.CreateTime,
-                "@UserID", bill.UserID,
-                "@Total", bill.Total,
-                "@list_json_DetailBill", bill.list_json_DetailBill != null ? MessageConvert.SerializeObject(bill.list_json_DetailBill) : null);
+                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Bills",
+                "@TotalPrice", bill.TotalPrice,
+                "@Status", bill.Status,
+                "@CustomerId", bill.CustomerId,
+                "@list_json_DetailBills", bill.list_json_DetailBills != null ? MessageConvert.SerializeObject(bill.list_json_DetailBills) : null);
 
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -42,43 +42,25 @@ namespace DAL
                 throw ex;
             }
         }
-
-        public bool Update(BillModel bill)
+     
+        public List<BillModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, 
+            DateTime? to_NgayTao)
         {
             string msgError = "";
+            total = 0;
             try
             {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Bill_update",
-                "@BillID", bill.BillID,
-                "@CreateTime", bill.CreateTime,
-                "@UserID", bill.UserID,
-                "@Total", bill.Total,
-                "@list_json_DetailBill", bill.list_json_DetailBill != null ? MessageConvert.SerializeObject(bill.list_json_DetailBill) : null);
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public bool Delete(string id)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Bill_delete",
-                "@BillID", id);
-                ;
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
+                var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_tim_kiem_Bills",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@ten_khach", ten_khach,
+                    "@fr_NgayTao", fr_NgayTao,
+                    "@to_NgayTao", to_NgayTao
+                     );
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<BillModel>().ToList();
             }
             catch (Exception ex)
             {

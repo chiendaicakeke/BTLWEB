@@ -20,15 +20,18 @@ namespace DAL
         }
 
        
-        public List<UsersModel> GetAll()
+      
+
+        public UserModel GetById(string id)
         {
             string msgError = "";
             try
             {
-                var data = _db.ExecuteQuery("sp_hien_thi_Users");
+                var data = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_tim_theo_id_Users",
+                    "@UserID", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return data.ConvertTo<UsersModel>().ToList();
+                return data.ConvertTo<UserModel>().FirstOrDefault();
             }
             catch (Exception ex)
             {
@@ -36,15 +39,36 @@ namespace DAL
                 throw ex;
             }
         }
-        public bool Create(UsersModel users)
+
+        public UserModel Login(string username, string password)
+        {
+            string msgError = "";
+            try
+            {
+                var data = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_login", 
+                    "@UserName",username,
+                    "@Password", password);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return data.ConvertTo<UserModel>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
+        public bool Create(UserModel users)
         {
             string msgError = "";
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_them_Users",
                 "@UserName", users.UserName,
-                "@Account", users.Account,
-                "@Password", users.Password);
+                "@Password", users.Password,
+                "@Role", users.Role);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -57,14 +81,16 @@ namespace DAL
             }
         }
 
-        public bool Update(UsersModel users)
+        public bool Update(UserModel users)
         {
             string msgError = "";
             try
             {
                 var result = _db.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_sua_Users",
-                "@UserID", users.UserID,
-                "@Password", users.Password);
+                "@UserID", users.UserId,
+                "@UserName", users.UserName,
+                "@Password", users.Password,
+                "@Role", users.Role);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
