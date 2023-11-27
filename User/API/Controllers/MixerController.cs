@@ -22,29 +22,6 @@ namespace API.Controllers
             return Ok(dt);
         }
 
-        [Route("Create-Mixer")]
-        [HttpPost]
-        public MixerModel CreateCar([FromBody] MixerModel mixer)
-        {
-            _uBusiness.Create(mixer);
-            return mixer;
-        }
-
-        [Route("update-Mixer")]
-        [HttpPost]
-        public MixerModel UpdateItem([FromBody] MixerModel mixer)
-        {
-            _uBusiness.Update(mixer);
-            return mixer;
-        }
-
-        [HttpDelete("delete-Mixer")]
-        public IActionResult DeleteItem(string id)
-        {
-            _uBusiness.Delete(id);
-            return Ok(new { message = "xoa thanh cong" });
-        }
-
 
     }
 }

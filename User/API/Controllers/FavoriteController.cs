@@ -22,28 +22,7 @@ namespace API.Controllers
             return Ok(dt);
         }
 
-        [Route("Create-Favorite")]
-        [HttpPost]
-        public FavoriteModel CreateCar([FromBody] FavoriteModel favorite)
-        {
-            _uBusiness.Create(favorite);
-            return favorite;
-        }
-
-        [Route("update-Favorite")]
-        [HttpPost]
-        public FavoriteModel UpdateItem([FromBody] FavoriteModel favorite)
-        {
-            _uBusiness.Update(favorite);
-            return favorite;
-        }
-
-        [HttpDelete("delete-Favorite")]
-        public IActionResult DeleteItem(string id)
-        {
-            _uBusiness.Delete(id);
-            return Ok(new { message = "xoa thanh cong" });
-        }
+        
 
 
     }
