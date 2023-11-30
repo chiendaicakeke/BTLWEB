@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FnWCTlkCdL0a38OyGF+02dq3nHJNUwWOVWnxIEwa+FBH3exu5pfnpIYd3568nRYwOcM5CladhuvUkRpNKhwIdA==",
+  "dgSpecHash": "sN5NFsB+ShkruxQ+2T3ZSnq83DP6sFA6NOfusPnIV+y3GqSb47+vPA0q5Dgo2ENeUgjIwBShRJRcRo4RwSD2cA==",
   "success": true,
-  "projectFilePath": "D:\\Desktop\\chien\\BTLWEB\\User\\DataModel\\DataModel.csproj",
+  "projectFilePath": "D:\\WEB\\BTL\\BTLWEB\\User\\DataModel\\DataModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
