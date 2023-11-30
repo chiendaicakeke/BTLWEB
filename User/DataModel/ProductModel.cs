@@ -14,6 +14,7 @@ namespace DataModel
         public string Size { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
+        public string ImageAfter { get; set; }
         public int ProductTypeId { get; set; }
         public int CollectionId { get; set; }
         public int ProducerId { get; set; }

@@ -19,7 +19,6 @@ namespace DAL
             _db = db;
         }
 
-
   
         public CollectionModel GetById(string id)
         {

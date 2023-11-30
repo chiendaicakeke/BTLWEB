@@ -33,6 +33,9 @@ create TABLE Collections (
 	
 );
 
+alter table Collections 
+add ImageAfter varchar(255)
+
 create table ProductTypes (
 	ProductTypeId int primary key identity,
 	ProductTypeName nvarchar(50),
@@ -62,7 +65,7 @@ create TABLE Products (
 
 
 alter table Products 
-add CreatedAt date default getdate()
+add ImageAfter varchar(255)
 
 -- bảng hóa đơn
 create table Bills (
@@ -349,7 +352,8 @@ AS
 				cl.CollectionId,
 				cl.CollectionName,
 				cl.Description,
-				cl.Image
+				cl.Image,
+				cl.ImageAfter
 		INTO #Results1
 		FROM Collections AS cl
 		WHERE  (@CollectionName = '' Or cl.CollectionName like N'%'+ @CollectionName+'%')
@@ -372,14 +376,14 @@ go
 
 -- Products
 
-create proc sp_get_new_product
+alter proc sp_get_new_product
 as
 begin 
-	select top 10 * from Products p
+	select top 8 * from Products p
 	order by p.CreatedAt
 end 
 
-sp_get_new_product
+
 
 create proc sp_get_by_id_Products
 (
@@ -438,6 +442,7 @@ begin
 			
 end
 
+sp_sua_Products 1 , 'LEVENTS® AQUARIUM BASIC TEE/ BLACK', 1000000, 'L', 'asefaf', '/asset/img/aoblacktruoc.jpg', 1,1,1
 
 create proc sp_xoa_Products (@ProductId int)
 as
@@ -446,7 +451,7 @@ begin
 	where ProductId = @ProductId
 end
 
-
+sp_tim_kiem_Products 1, 10, ''
 create PROCEDURE sp_tim_kiem_Products (
 	@page_index  INT, 
     @page_size   INT,

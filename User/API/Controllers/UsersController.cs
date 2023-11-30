@@ -28,7 +28,7 @@ namespace API.Controllers
             var user = _uBusiness.Login(model.UserName, model.Password);
             if (user == null)
                 return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
-            return Ok(new { taikhoan = user.UserName, role = user.Role, token = user.token });
+            return Ok(new {userId= user.UserId, taikhoan = user.UserName, role = user.Role, token = user.token });
         }
 
 
