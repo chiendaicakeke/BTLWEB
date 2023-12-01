@@ -35,9 +35,6 @@ create TABLE Collections (
 alter table Collections 
 add ImageAfter varchar(255)
 
-alter table Collections 
-add ImageAfter varchar(255)
-
 create table ProductTypes (
 	ProductTypeId int primary key identity,
 	ProductTypeName nvarchar(50),
@@ -385,16 +382,16 @@ begin
 	order by p.CreatedAt
 end 
 
+sp_get_new_product
 
-
-create proc sp_get_by_id_Products
+alter proc sp_get_by_id_Products
 (
 	@ProductId int
 )
 as
 begin
 	select * from Products
-	where ProducerId = @ProductId
+	where ProductId = @ProductId
 end
 
 
@@ -444,7 +441,6 @@ begin
 			
 end
 
-sp_sua_Products 1 , 'LEVENTS® AQUARIUM BASIC TEE/ BLACK', 1000000, 'L', 'asefaf', '/asset/img/aoblacktruoc.jpg', 1,1,1
 
 create proc sp_xoa_Products (@ProductId int)
 as
@@ -453,7 +449,7 @@ begin
 	where ProductId = @ProductId
 end
 
-sp_tim_kiem_Products 1, 10, ''
+
 create PROCEDURE sp_tim_kiem_Products (
 	@page_index  INT, 
     @page_size   INT,
@@ -590,7 +586,6 @@ begin
 end
 
 --------------------------------------------------------------------------
-sp_tim_kiem_Bills 1 , 10, '', null, null
 -- Thống kê
 alter PROC sp_tim_kiem_Bills (
 	@page_index  INT, 
@@ -602,11 +597,7 @@ alter PROC sp_tim_kiem_Bills (
 AS
     BEGIN
         DECLARE @RecordCount BIGINT;
-<<<<<<< HEAD
 		DECLARE @TotalPrice int;
-=======
-        DECLARE @TotalPrice int;
->>>>>>> afb0ee91e3675b6f09581069159743fbe366a495
 
         SELECT(ROW_NUMBER() OVER(
                 ORDER BY b.CreatedAt ASC)) AS RowNumber, 

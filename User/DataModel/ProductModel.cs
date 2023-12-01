@@ -18,7 +18,6 @@ namespace DataModel
         public int ProductTypeId { get; set; }
         public int CollectionId { get; set; }
         public int ProducerId { get; set; }
-        public string ImageAfter { get; set; }
     }
 
     public class ProductType
