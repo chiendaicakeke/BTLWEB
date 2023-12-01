@@ -2,6 +2,7 @@
 using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace API.Controllers
 {
@@ -47,6 +48,10 @@ namespace API.Controllers
             {
                 var page = int.Parse(formData["page"].ToString());
                 var pageSize = int.Parse(formData["pageSize"].ToString());
+
+                long total = 0;
+                int totalprice = 0;
+
                 string ten_khach = "";
                 if (formData.Keys.Contains("ten_khach") && !string.IsNullOrEmpty(Convert.ToString(formData["ten_khach"]))) { ten_khach = Convert.ToString(formData["ten_khach"]); }
                 DateTime? fr_NgayTao = null;
@@ -61,8 +66,12 @@ namespace API.Controllers
                     var dt = Convert.ToDateTime(formData["to_NgayTao"].ToString());
                     to_NgayTao = new DateTime(dt.Year, dt.Month, dt.Day, 23, 59, 59, 999);
                 }
+<<<<<<< HEAD
                 long total = 0;
                 int totalprice = 0;
+=======
+              
+>>>>>>> afb0ee91e3675b6f09581069159743fbe366a495
                 var data = _uBusiness.Search(page, pageSize, out total, out totalprice, ten_khach, fr_NgayTao, to_NgayTao);
                 return Ok(
                     new
