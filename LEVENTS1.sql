@@ -588,8 +588,9 @@ begin
 end
 
 --------------------------------------------------------------------------
+sp_tim_kiem_Bills 1 , 10, '', null, null
 -- Thống kê
-create PROC sp_tim_kiem_Bills (
+alter PROC sp_tim_kiem_Bills (
 	@page_index  INT, 
     @page_size   INT,
 	@ten_khach Nvarchar(50),
@@ -599,6 +600,7 @@ create PROC sp_tim_kiem_Bills (
 AS
     BEGIN
         DECLARE @RecordCount BIGINT;
+        DECLARE @TotalPrice int;
 
         SELECT(ROW_NUMBER() OVER(
                 ORDER BY b.CreatedAt ASC)) AS RowNumber, 
@@ -616,11 +618,11 @@ AS
         OR (@fr_NgayTao IS NULL AND @to_NgayTao IS NOT NULL AND b.CreatedAt <= @to_NgayTao) 
         OR (b.CreatedAt BETWEEN @fr_NgayTao AND @to_NgayTao)) 
 		
-        SELECT @RecordCount = COUNT(*)
+        SELECT @RecordCount = COUNT(*), @TotalPrice = Sum(TotalPrice)
         FROM #Results1;
 
         SELECT *, 
-                @RecordCount AS RecordCount
+                @RecordCount AS RecordCount, @TotalPrice as Revenue
         FROM #Results1
         WHERE ROWNUMBER BETWEEN(@page_index - 1) * @page_size + 1 AND(((@page_index - 1) * @page_size + 1) + @page_size) - 1
                 OR @page_index = -1;
