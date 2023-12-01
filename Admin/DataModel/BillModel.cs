@@ -10,7 +10,7 @@ namespace DataModel
     {
         public int BillId { get; set; }
         public int TotalPrice { get; set; }
-        public bool Status { get; set; }
+        public string Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int CustomerId { get; set; }

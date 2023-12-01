@@ -86,11 +86,12 @@ namespace DAL
                 throw ex;
             }
         }
-        public List<BillModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, 
+        public List<BillModel> Search(int pageIndex, int pageSize, out long total, out int totalprice, string ten_khach, DateTime? fr_NgayTao, 
             DateTime? to_NgayTao)
         {
             string msgError = "";
             total = 0;
+            totalprice = 0;
             try
             {
                 var dt = _db.ExecuteSProcedureReturnDataTable(out msgError, "sp_tim_kiem_Bills",
@@ -103,6 +104,7 @@ namespace DAL
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                if (dt.Rows.Count > 0) totalprice = (int)dt.Rows[0]["Revenue"];
                 return dt.ConvertTo<BillModel>().ToList();
             }
             catch (Exception ex)

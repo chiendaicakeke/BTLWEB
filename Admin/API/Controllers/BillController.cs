@@ -62,11 +62,13 @@ namespace API.Controllers
                     to_NgayTao = new DateTime(dt.Year, dt.Month, dt.Day, 23, 59, 59, 999);
                 }
                 long total = 0;
-                var data = _uBusiness.Search(page, pageSize, out total, ten_khach, fr_NgayTao, to_NgayTao);
+                int totalprice = 0;
+                var data = _uBusiness.Search(page, pageSize, out total, out totalprice, ten_khach, fr_NgayTao, to_NgayTao);
                 return Ok(
                     new
                     {
                         TotalItems = total,
+                        TotalPrice = totalprice,
                         Data = data,
                         Page = page,
                         PageSize = pageSize

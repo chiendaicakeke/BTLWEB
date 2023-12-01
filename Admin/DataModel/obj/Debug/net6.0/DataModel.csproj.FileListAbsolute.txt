@@ -55,3 +55,14 @@ D:\Desktop\chien\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.dll
 D:\Desktop\chien\BTLWEB\Admin\DataModel\obj\Debug\net6.0\refint\DataModel.dll
 D:\Desktop\chien\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.pdb
 D:\Desktop\chien\BTLWEB\Admin\DataModel\obj\Debug\net6.0\ref\DataModel.dll
+D:\WEB\BTL\BTLWEB\Admin\DataModel\bin\Debug\net6.0\DataModel.deps.json
+D:\WEB\BTL\BTLWEB\Admin\DataModel\bin\Debug\net6.0\DataModel.dll
+D:\WEB\BTL\BTLWEB\Admin\DataModel\bin\Debug\net6.0\DataModel.pdb
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfoInputs.cache
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.AssemblyInfo.cs
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.csproj.CoreCompileInputs.cache
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.dll
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\refint\DataModel.dll
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\DataModel.pdb
+D:\WEB\BTL\BTLWEB\Admin\DataModel\obj\Debug\net6.0\ref\DataModel.dll

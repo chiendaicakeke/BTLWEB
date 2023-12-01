@@ -2203,19 +2203,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HOAN\\.nuget\\packages\\": {}
+    "C:\\Users\\chien dz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\chien\\BTLWEB\\Admin\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\WEB\\BTL\\BTLWEB\\Admin\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Desktop\\chien\\BTLWEB\\Admin\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\HOAN\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\chien\\BTLWEB\\Admin\\DAL\\obj\\",
+      "projectPath": "D:\\WEB\\BTL\\BTLWEB\\Admin\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\chien dz\\.nuget\\packages\\",
+      "outputPath": "D:\\WEB\\BTL\\BTLWEB\\Admin\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HOAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chien dz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2229,8 +2229,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Desktop\\chien\\BTLWEB\\Admin\\DataModel\\DataModel.csproj": {
-              "projectPath": "D:\\Desktop\\chien\\BTLWEB\\Admin\\DataModel\\DataModel.csproj"
+            "D:\\WEB\\BTL\\BTLWEB\\Admin\\DataModel\\DataModel.csproj": {
+              "projectPath": "D:\\WEB\\BTL\\BTLWEB\\Admin\\DataModel\\DataModel.csproj"
             }
           }
         }
@@ -2274,7 +2274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

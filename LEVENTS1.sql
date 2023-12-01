@@ -32,6 +32,8 @@ create TABLE Collections (
 	Image varchar(255)
 	
 );
+alter table Collections 
+add ImageAfter varchar(255)
 
 create table ProductTypes (
 	ProductTypeId int primary key identity,
@@ -62,7 +64,7 @@ create TABLE Products (
 
 
 alter table Products 
-add CreatedAt date default getdate()
+add ImageAfter varchar(255)
 
 -- bảng hóa đơn
 create table Bills (
@@ -336,7 +338,7 @@ end
 
 
 
-create PROCEDURE sp_tim_kiem_Collections (
+alter PROCEDURE sp_tim_kiem_Collections (
 	@page_index  INT, 
     @page_size   INT,
 	@CollectionName Nvarchar(50)
@@ -349,7 +351,8 @@ AS
 				cl.CollectionId,
 				cl.CollectionName,
 				cl.Description,
-				cl.Image
+				cl.Image,
+				cl.ImageAfter
 		INTO #Results1
 		FROM Collections AS cl
 		WHERE  (@CollectionName = '' Or cl.CollectionName like N'%'+ @CollectionName+'%')
@@ -372,10 +375,10 @@ go
 
 -- Products
 
-create proc sp_get_new_product
+alter proc sp_get_new_product
 as
 begin 
-	select top 10 * from Products p
+	select top 8 * from Products p
 	order by p.CreatedAt
 end 
 
@@ -594,6 +597,7 @@ create PROC sp_tim_kiem_Bills (
 AS
     BEGIN
         DECLARE @RecordCount BIGINT;
+		DECLARE @TotalPrice int;
 
         SELECT(ROW_NUMBER() OVER(
                 ORDER BY b.CreatedAt ASC)) AS RowNumber, 
@@ -611,11 +615,11 @@ AS
         OR (@fr_NgayTao IS NULL AND @to_NgayTao IS NOT NULL AND b.CreatedAt <= @to_NgayTao) 
         OR (b.CreatedAt BETWEEN @fr_NgayTao AND @to_NgayTao)) 
 		
-        SELECT @RecordCount = COUNT(*)
+        SELECT @RecordCount = COUNT(*), @TotalPrice = Sum(TotalPrice)
         FROM #Results1;
 
         SELECT *, 
-                @RecordCount AS RecordCount
+                @RecordCount AS RecordCount, @TotalPrice as Revenue
         FROM #Results1
         WHERE ROWNUMBER BETWEEN(@page_index - 1) * @page_size + 1 AND(((@page_index - 1) * @page_size + 1) + @page_size) - 1
                 OR @page_index = -1;

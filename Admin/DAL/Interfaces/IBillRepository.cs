@@ -14,7 +14,7 @@ namespace DAL.Interfaces
 
         bool Update(BillModel bill);
         bool Delete(string id);
-        List<BillModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao,
+        List<BillModel> Search(int pageIndex, int pageSize, out long total, out int totalprice, string ten_khach, DateTime? fr_NgayTao,
            DateTime? to_NgayTao);
     }
 }
